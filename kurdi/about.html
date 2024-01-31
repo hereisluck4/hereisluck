@@ -1,0 +1,286 @@
+<html lang="ku">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>about</title>
+    <link rel="icon" href="HereisLuck.jpg" type="image/x-icon" style="border-radius: 50%;">
+    <style>
+
+
+:root {
+    --primary-color: #f9532d;
+    --primary-dark: #1F252E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(161.5deg, #1F252E 50%, #676d52 50%);
+    height: 100vh;
+    color: #ffffff;
+}
+
+
+
+
+
+
+     
+        nav {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+        }
+
+        nav h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav h1 img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        #content {
+            text-align: center;
+            padding: 20px;
+            margin: 30px;
+        }
+
+
+
+        section {
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+        }
+
+
+
+        section p {
+            font-size: 26px;
+            line-height: 1.5;
+            color: #ffffff;
+            text-align: center;
+            text-align: justify;
+            align-items: center;
+            direction: rtl;
+        }
+       
+
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 13px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            color: #ffffff;
+        }
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 55px;
+                left: 0;
+                background-color: #000000;
+                padding: 10px;
+                
+                animation: fadeIn 0.5s ease-in-out;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav li {
+                margin: 15px;
+                text-align: center;
+                
+            }
+
+            .menu-icon {
+                
+                display: block;
+                font-size: large;
+            }
+            section p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #ffffff;
+            text-align: center;
+            text-align: justify;
+            align-items: center;
+        }
+       
+
+          
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+@media screen and (max-width:600px) {
+    body {
+        height: 100vh;
+    }
+    header {
+        height: auto;
+        background-color: var(--primary-dark);
+    }
+
+    ul {
+        background: var(--primary-dark);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 3.4rem;
+        left: -100%;
+        z-index: 111111;
+    }
+
+    .menu {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #244D61;
+    }
+
+    #click:checked~ul {
+        left: 0%;
+        transition: all 0.3s ease;
+    }
+    section p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #ffffff;
+            text-align: center;
+            text-align: justify;
+            align-items: center;
+        }
+       
+
+    
+}
+
+       
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>
+            <img src="HereisLuck.jpg" alt="Logo">
+            here's luck
+        </h1>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="project.html"> پروژە <i class="fas fa-briefcase"></i></a></li></a></li>
+            <li><a style="color: #49f506;" href="about.html"> دەربارە <i class="fas fa-info-circle"></i></a></li></a></li>
+            <li><a href="contact.html"> پەیوەندی <i class="fas fa-phone-alt"></i></a></li></a></li>
+           <li><a href="index.html"> دەسپێک <i class="fa fa-home" aria-hidden="true"></i></a></li></a></li>
+            
+
+
+
+        </ul>
+    </nav>
+
+    <section>
+        <h1><sup>&copy;</sup> دەربارە  </h1>
+        <p>بخێربهێن بۆ گروپێ مە  ئەم ئامادەینە بۆ خزمەتکرنا وە بۆ دروستکرنا  سیڤی، راپورت، سمینار، بزنس کارت، زێدەکرنا جهێ تە بۆ سەر نەخشەی، وێبسایتێن کەسی، سیستەمێن مەخزەن، وێبسایتێن کومپانیا، دیزانکرنا پەرتوکان، لیستێن خارنگەها، راستڤەکرنا وێبسایتان، پروژێن دەرچوونێ، پاراستنا ئەپلیکەیشنان، موتاجکرنا ڤیدیویان  ژ بلی وان کارێن بوری، ئەم دشێین هاریکاریا تە بکەین بۆ رێڤەبرنا وێبسایتێ تە یان پەیجێ تە ل انسگرام و سناپی،   گروپێ مە باشترینە بۆ تە، مە ب هەلبژێرە و دخەما کارێ خودا نەبە</p>
+        </section>
+
+
+  
+
+    <footer>
+        <p>&copy; 2024 here's luck هەمی ماف پاراستینە بوو </p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>

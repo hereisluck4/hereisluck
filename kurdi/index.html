@@ -1,0 +1,375 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>home </title>
+    <link rel="icon" href="HereisLuck.jpg" type="image/x-icon" style="border-radius: 50%;">
+  
+    <style>
+
+
+:root {
+    --primary-color: #f9532d;
+    --primary-dark: #1F252E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    background: linear-gradient(161.5deg, #1F252E 50%, #fff 50%);
+    height: 100vh;
+    color: #ffffff;
+}
+
+
+
+
+
+
+     
+        nav {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+        }
+
+        nav h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav h1 img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        #content {
+            text-align: center;
+            padding: 20px;
+            margin: 30px;
+        }
+
+       
+
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 13px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            color: #ffffff;
+        }
+
+
+
+
+
+        
+/* Section 1 */
+
+.main {
+    padding: 6rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
+    row-gap: 2rem;
+    column-gap: 6rem;
+    align-items: center;
+}
+.main h3 {
+    color: #000000;
+    font-size: 3rem;
+    margin-left: 20px;
+    opacity: 0;
+    animation: topSideAni 1s ease forwards;
+}
+.main h1 {
+    color: #000;
+    font-size: 4rem;
+    font-weight: 600;
+    opacity: 0;
+    margin-left: 20px;
+
+    animation: leftSideAni 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin-top: 1.4rem;
+    margin-left: 20px;
+}
+
+.social a {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    border: 1.6px solid var(--primary-color);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    padding: 0.39rem;
+    text-align: center;
+    opacity: 0;
+    animation: SocialAni 1s ease forwards;
+    animation-delay: calc(.2s * var(--socialAni));
+}
+
+.social a:hover {
+    color: var(--primary-dark);
+    background-color: var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+    transition: all .3s ease-in-out;
+}
+
+
+.images {
+    margin-left: auto;
+    width: 300px;
+}   
+.images img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px #D1D9E6;
+}
+
+/* Section 1 End */
+
+/* Animation */
+@keyframes leftSideAni {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes navani {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes topSideAni {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes SocialAni {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 55px;
+                left: 0;
+                background-color: #000000;
+                padding: 10px;
+                
+                animation: fadeIn 0.5s ease-in-out;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav li {
+                margin: 15px;
+                text-align: center;
+                
+            }
+
+            .menu-icon {
+                
+                display: block;
+                font-size: large;
+            }
+
+          
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+@media screen and (max-width:600px) {
+    body {
+        height: 100vh;
+    }
+    header {
+        height: auto;
+        background-color: var(--primary-dark);
+    }
+
+    ul {
+        background: var(--primary-dark);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 3.4rem;
+        left: -100%;
+        z-index: 111111;
+    }
+
+    .menu {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #244D61;
+    }
+
+    #click:checked~ul {
+        left: 0%;
+        transition: all 0.3s ease;
+    }
+    .images {
+        width: 100%;
+        margin: auto;
+    }
+
+    .main {
+        margin-top: 2rem;
+    }
+}
+
+       
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>
+            <img src="HereisLuck.jpg" alt="Logo">
+            here's luck
+        </h1>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="project.html"> پروژە <i class="fas fa-briefcase"></i></a></li></a></li>
+            <li><a  href="about.html"> دەربارە <i class="fas fa-info-circle"></i></a></li></a></li>
+            <li><a href="contact.html"> پەیوەندی <i class="fas fa-phone-alt"></i></a></li></a></li>
+           <li><a style="color: #49f506;" href="index.html"> دەسپێک <i class="fa fa-home" aria-hidden="true"></i></a></li></a></li>
+            
+
+
+
+        </ul>
+    </nav>
+
+    <section class="container">
+        <div class="main">
+            <div class="images">
+                <img src="HereisLuck.jpg" alt="" class="img-w">
+            </div>
+            <div class="detail">
+                <h3>سڵاڤ ، بخێرهاتی</h3>
+                <h1><span style="color:#f9532d;">Here's</span> Luck</h1>   
+                <div class="social">
+                   
+                    <a href="../enlish/index.html">EN</a>
+                    <a href="../arabic/index.html" >AR</a>
+                    <a href="../kurdi/index.html" >KU</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  
+
+    <footer>
+        <p>&copy; 2024 here's luck هەمی ماف پاراستینە بوو </p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>
